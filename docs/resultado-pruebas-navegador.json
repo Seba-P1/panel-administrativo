@@ -1,0 +1,22 @@
+{
+  "passed": 16,
+  "checks": [
+    "Instalación y login desde el navegador",
+    "Resumen con seis proyectos reales precargados",
+    "Alta de cliente con persistencia",
+    "Alta de proyecto y asignación de cliente",
+    "Ficha individual y notas editables",
+    "Generación de token privado por proyecto",
+    "Creación de tarea en curso",
+    "Kanban arrastrable persiste cambio de estado",
+    "Evento editable en calendario",
+    "Valida horario y permite editar y eliminar eventos",
+    "Creación de cargo con decimales exactos",
+    "Pago aplicado al saldo del cargo",
+    "Sincronización en vivo entre dos pestañas",
+    "Configuración y auditoría accesibles",
+    "Navegación móvil sin desborde horizontal",
+    "Sin errores JavaScript en navegador"
+  ],
+  "errors": []
+}

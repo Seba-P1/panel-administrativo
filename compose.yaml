@@ -1,0 +1,41 @@
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      NODE_ENV: production
+      HOST: 0.0.0.0
+      PORT: 3001
+      DATA_DIR: /app/data
+      TRUST_PROXY: "1"
+    volumes:
+      - nexo_data:/app/data
+      - nexo_backups:/app/backups
+    expose:
+      - "3001"
+    networks:
+      - internal
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    environment:
+      PANEL_DOMAIN: ${PANEL_DOMAIN:?Defini PANEL_DOMAIN en .env}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - app
+    networks:
+      - internal
+volumes:
+  nexo_data:
+  nexo_backups:
+  caddy_data:
+  caddy_config:
+networks:
+  internal:

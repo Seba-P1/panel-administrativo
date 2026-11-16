@@ -1,0 +1,230 @@
+
+> nexo-client-hub@1.0.0 test
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: API protegida rechaza acceso anónimo
+ok 1 - API protegida rechaza acceso anónimo
+  ---
+  duration_ms: 265.456399
+  type: 'test'
+  ...
+# Subtest: Instalación rechaza código incorrecto
+ok 2 - Instalación rechaza código incorrecto
+  ---
+  duration_ms: 21.062355
+  type: 'test'
+  ...
+# Subtest: Instalación y login seguros
+ok 3 - Instalación y login seguros
+  ---
+  duration_ms: 98.978811
+  type: 'test'
+  ...
+# Subtest: No permite reinstalar sobre una cuenta existente
+ok 4 - No permite reinstalar sobre una cuenta existente
+  ---
+  duration_ms: 5.140706
+  type: 'test'
+  ...
+# Subtest: Precarga exactamente seis proyectos y no inventa recibos
+ok 5 - Precarga exactamente seis proyectos y no inventa recibos
+  ---
+  duration_ms: 19.705928
+  type: 'test'
+  ...
+# Subtest: Rechaza cambios sin CSRF y desde otro origen
+ok 6 - Rechaza cambios sin CSRF y desde otro origen
+  ---
+  duration_ms: 8.067195
+  type: 'test'
+  ...
+# Subtest: CRUD y control de conflictos de edición
+ok 7 - CRUD y control de conflictos de edición
+  ---
+  duration_ms: 18.11827
+  type: 'test'
+  ...
+# Subtest: Valida fechas reales y relaciones
+ok 8 - Valida fechas reales y relaciones
+  ---
+  duration_ms: 7.122359
+  type: 'test'
+  ...
+# Subtest: Registra cargo y rechaza pagos superiores al saldo o con otra moneda
+ok 9 - Registra cargo y rechaza pagos superiores al saldo o con otra moneda
+  ---
+  duration_ms: 13.200016
+  type: 'test'
+  ...
+# Subtest: No altera importe de un cargo con pagos vigentes
+ok 10 - No altera importe de un cargo con pagos vigentes
+  ---
+  duration_ms: 7.036246
+  type: 'test'
+  ...
+# Subtest: Conector aislado por proyecto y sin notas privadas
+ok 11 - Conector aislado por proyecto y sin notas privadas
+  ---
+  duration_ms: 12.406047
+  type: 'test'
+  ...
+# Subtest: Suspensión requiere motivo y autorización de política
+ok 12 - Suspensión requiere motivo y autorización de política
+  ---
+  duration_ms: 11.743851
+  type: 'test'
+  ...
+# Subtest: Pago completo rehabilita suspensión automática
+ok 13 - Pago completo rehabilita suspensión automática
+  ---
+  duration_ms: 5.682398
+  type: 'test'
+  ...
+# Subtest: Rotación y revocación invalidan credenciales anteriores
+ok 14 - Rotación y revocación invalidan credenciales anteriores
+  ---
+  duration_ms: 10.694291
+  type: 'test'
+  ...
+# Subtest: Generación mensual idempotente
+ok 15 - Generación mensual idempotente
+  ---
+  duration_ms: 6.825436
+  type: 'test'
+  ...
+# Subtest: Meses cubiertos por adelantos confirmados no crean cargos
+ok 16 - Meses cubiertos por adelantos confirmados no crean cargos
+  ---
+  duration_ms: 5.564195
+  type: 'test'
+  ...
+# Subtest: Tareas y calendario se pueden crear, editar y borrar
+ok 17 - Tareas y calendario se pueden crear, editar y borrar
+  ---
+  duration_ms: 23.014345
+  type: 'test'
+  ...
+# Subtest: Estado JSON, auditoría y exportación sin credenciales
+ok 18 - Estado JSON, auditoría y exportación sin credenciales
+  ---
+  duration_ms: 7.106345
+  type: 'test'
+  ...
+# Subtest: Copia SQLite consistente y restauración comprobadas
+ok 19 - Copia SQLite consistente y restauración comprobadas
+  ---
+  duration_ms: 84.264923
+  type: 'test'
+  ...
+# Subtest: Logout invalida la sesión
+ok 20 - Logout invalida la sesión
+  ---
+  duration_ms: 7.959487
+  type: 'test'
+  ...
+# Subtest: No inventa deuda ni estado al día cuando faltan comprobantes
+ok 21 - No inventa deuda ni estado al día cuando faltan comprobantes
+  ---
+  duration_ms: 2.546436
+  type: 'test'
+  ...
+# Subtest: Adelanto sin fecha permanece para revisión
+ok 22 - Adelanto sin fecha permanece para revisión
+  ---
+  duration_ms: 0.317212
+  type: 'test'
+  ...
+# Subtest: Seis meses confirmados cubren hasta la renovación exclusiva
+ok 23 - Seis meses confirmados cubren hasta la renovación exclusiva
+  ---
+  duration_ms: 0.470942
+  type: 'test'
+  ...
+# Subtest: Pago parcial conserva saldo exacto en centavos
+ok 24 - Pago parcial conserva saldo exacto en centavos
+  ---
+  duration_ms: 0.181163
+  type: 'test'
+  ...
+# Subtest: Pagos anulados no cancelan deuda
+ok 25 - Pagos anulados no cancelan deuda
+  ---
+  duration_ms: 0.172573
+  type: 'test'
+  ...
+# Subtest: Monedas no se suman entre sí
+ok 26 - Monedas no se suman entre sí
+  ---
+  duration_ms: 7.017466
+  type: 'test'
+  ...
+# Subtest: Mora sin permiso no suspende
+ok 27 - Mora sin permiso no suspende
+  ---
+  duration_ms: 0.141795
+  type: 'test'
+  ...
+# Subtest: Suspensión automática exige acuerdo y gestión habilitada
+ok 28 - Suspensión automática exige acuerdo y gestión habilitada
+  ---
+  duration_ms: 0.295178
+  type: 'test'
+  ...
+# Subtest: Respeta exactamente los días de gracia
+ok 29 - Respeta exactamente los días de gracia
+  ---
+  duration_ms: 0.391104
+  type: 'test'
+  ...
+# Subtest: Un pago completo regulariza la suspensión automática
+ok 30 - Un pago completo regulariza la suspensión automática
+  ---
+  duration_ms: 0.396751
+  type: 'test'
+  ...
+# Subtest: Suspensión manual permanece hasta quitarla manualmente
+ok 31 - Suspensión manual permanece hasta quitarla manualmente
+  ---
+  duration_ms: 0.176889
+  type: 'test'
+  ...
+# Subtest: Los cargos anulados no generan deuda
+ok 32 - Los cargos anulados no generan deuda
+  ---
+  duration_ms: 0.131788
+  type: 'test'
+  ...
+# Subtest: El vencimiento de hoy no se considera atrasado
+ok 33 - El vencimiento de hoy no se considera atrasado
+  ---
+  duration_ms: 0.117802
+  type: 'test'
+  ...
+# Subtest: Un adelanto no borra deudas anteriores
+ok 34 - Un adelanto no borra deudas anteriores
+  ---
+  duration_ms: 0.123927
+  type: 'test'
+  ...
+# Subtest: Los meses respetan fin de mes y años bisiestos
+ok 35 - Los meses respetan fin de mes y años bisiestos
+  ---
+  duration_ms: 0.107881
+  type: 'test'
+  ...
+# Subtest: Calendario por días sin errores de horario de verano
+ok 36 - Calendario por días sin errores de horario de verano
+  ---
+  duration_ms: 14.464651
+  type: 'test'
+  ...
+1..36
+# tests 36
+# suites 0
+# pass 36
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 794.538442

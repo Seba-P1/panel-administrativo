@@ -1,0 +1,7 @@
+{
+  # HTTPS automatico: dominio real y puertos 80/443 accesibles.
+}
+{$PANEL_DOMAIN} {
+  encode zstd gzip
+  reverse_proxy app:3001
+}
